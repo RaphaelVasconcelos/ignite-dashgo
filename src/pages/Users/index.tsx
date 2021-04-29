@@ -35,7 +35,7 @@ export default function UserList() {
     lg: true,
   });
 
-  async function handlePrefetchUser(userId: number){
+  async function handlePrefetchUser(userId: string){
     await queryClient.prefetchQuery(['User', userId], async () => {
       const response = await api.get(`Users/${userId}`);
 
