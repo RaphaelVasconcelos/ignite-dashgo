@@ -48,6 +48,7 @@ export function makeServer() {
         return new Response(200, { 'x-total-count': String(total) }, { users });
       });
 
+      this.get('Users/:id');
       this.post('/Users');
 
       // resetar namespace por conta do next api
